@@ -23,7 +23,7 @@ MENDER_RESERVED_SPACE_BOOTLOADER_DATA_DEFAULT_mender-uboot = \
 # make sure to provide a weak default
 UBOOT_SUFFIX ??= "bin"
 
- Prefer to use our auto provided fw-utils variant which duplicates the sources
+# Prefer to use our auto provided fw-utils variant which duplicates the sources
 # from u-boot, so we don't have to apply the same patches twice.
 PREFERRED_PROVIDER_u-boot-fw-utils ??= "${@mender_check_distro_features_early_contains(d, \
                                                                                        'mender-uboot', \
